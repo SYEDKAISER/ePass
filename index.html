@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ePass Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 70px; /* Adjusted padding to create space between navbar and content */
+            font-family: 'Roboto', sans-serif;
+            background-image: url('Civil-Secretariat.jpg'); /* Replace 'your-image-url.jpg' with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff; /* Set text color for better visibility on the background image */
+        }
+
+        .navbar {
+            background-color: #005cbf;
+            justify-content: space-between;
+            border-bottom: 2px solid #004080;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+            .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .navbar img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 15px;
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #f8f9fa !important;
+        }
+
+        .notice-section {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+    
+
+        .notice-section h4{
+            color: #000000;
+        }
+        .notice-section p{
+            color: #000000;
+        }
+        .updates-section {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .updates-section h4{
+            color: #005cbf;
+        }
+        .updates-section li{
+            color: #686868;
+        }
+
+        .updates-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .updates-list li {
+            margin-bottom: 10px;
+        }
+
+        .card {
+    background-color: #ffffff;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: static; /* Add this line to prevent affecting the dropdown */
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: all;
+}
+
+.dropdown-menu {
+    z-index: 1001; /* Set a higher z-index for the dropdown menu */
+}
+
+.card-title {
+    color: #005cbf;
+    font-size: 1.2rem;
+}
+
+.card-text {
+    color: #495057;
+}
+
+.btn-primary {
+    background-color: #005cbf;
+    border-color: #005cbf;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #004080;
+    border-color: #004080;
+}
+
+        .slogan-section {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 60px;
+            margin-top: 70px;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slogan-section h2 {
+            color: #005cbf;
+        }
+
+        .slogan-section p {
+            color: #495057;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background-color: #005cbf;
+            color: #f8f9fa;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.jpg" alt="Logo"> ePass System
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="track-status.html">Track Status</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq-page.html">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Notice Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+    <div class="notice-section">
+        <h4>ePass Management System</h4>
+        <p>Stay updated with the latest information regarding ePass applications.</p>
+    </div></div></div></div>
+
+    <!-- Latest Updates Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="updates-section">
+                    <h4>Latest Updates</h4>
+                    <ul class="updates-list">
+                        <li>Update 1 - [Date]</li>
+                        <li>Update 2 - [Date]</li>
+                        <li>Update 3 - [Date]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+           <!-- Apply Here Card -->
+           <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Apply for ePass</h5>
+                    <p class="card-text">ePass generation for entering the Civil Secretariat:</p>
+                    <div class="dropdown">
+                        <button class="btn btn-primary btn-block dropdown-toggle hover" type="button"
+                            id="applyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Application
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="applyDropdown">
+                            <a class="dropdown-item" href="apply-epass.html">Apply as Citizen</a>
+                            <a class="dropdown-item" href="##">Apply as Employee</a>
+                            <!-- Add more dropdown items as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Track Status Card -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Track Status</h5>
+                    <p class="card-text">Check the status of your ePass application in real-time.</p>
+                    <a href="track-status.html" class="btn btn-primary btn-block">Track Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us Card -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us</h5>
+                    <p class="card-text">Have questions or concerns? Reach out to our support team.</p>
+                    <a href="contact-us.html" class="btn btn-primary btn-block">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Slogan and Explanation Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="slogan-section">
+                    <h2>Our Mission: Making Your Access Seamless</h2>
+                    <p>
+                        At ePass Management System, our mission is to simplify your access to Civil secretrate.
+                        We believe in providing a secure and efficient system for ePass applications and status tracking.
+                        With our user-friendly interface, we aim to make the entire process hassle-free for every citizen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2023 ePass Management System | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+
+   <!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+</body>
+</html>

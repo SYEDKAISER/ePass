@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login - ePass Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom styles here */
+        body {
+            padding-top: 70px; /* Adjusted padding to create space between navbar and content */
+            font-family: 'Roboto', sans-serif;
+            background-image: url('Civil-Secretariat.jpg'); /* Replace 'your-image-url.jpg' with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff; /* Set text color for better visibility on the background image */
+        }
+
+        .navbar {
+            background-color: #005cbf;
+            justify-content: space-between;
+            border-bottom: 2px solid #004080;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        body {
+            padding-top: 56px;
+            background-color: #f8f9fa; /* Light grey background color */
+        }
+
+        .navbar {
+            background-color: #005cbf; /* Dark blue navbar */
+            justify-content: space-between; /* Align items on the right side */
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .navbar img {
+            height: 40px; /* Adjust the height as needed */
+            margin-right: 10px;
+        }
+
+        .navbar-nav {
+            justify-content: flex-end; /* Move the navigation links to the right */
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 15px; /* Adjust the spacing between links */
+        }
+
+        .nav-link {
+            color: #ffffff !important; /* Set link color to white */
+        }
+
+        .nav-link:hover {
+            color: #f8f9fa !important; /* Set link color to a lighter shade on hover */
+        }
+
+        .footer {
+            background-color: #005cbf; /* Dark blue footer */
+            color: #f8f9fa;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            background-color: rgb(104, 104, 255);
+          
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #005cbf;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-login:hover {
+            background-color: #2980b9;
+        }
+
+        .links-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .links-container a {
+            margin-right: 15px;
+            color: #3498db; /* Set link color to the primary color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .links-container a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        .links-container span {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html">
+        <img src="logo.jpg" alt="Logo"> ePass System
+    </a>
+    <!-- Add more navigation links as needed -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="track-status.html">Track Status</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="faq-page.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Login Page Content -->
+    <div class="container login-container">
+        <h2>Citizen Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-login">Login</button>
+        </form>
+        <!-- Links for Forgot Password, Register as New, and Login with Digilocker -->
+        <div class="links-container">
+            <a href="forget-password.html" class="forgot-password">Forgot Password</a>
+            <span>|</span>
+               <a href="https://accounts.digilocker.gov.in/signin/smart_v2/17b13dd960dc6282c0498f6efc1a54ad--en" class="login-digilocker">Login with Digilocker</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2023 ePass Management System | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
